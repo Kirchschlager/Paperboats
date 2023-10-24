@@ -1,0 +1,34 @@
+##################################################################################
+#                    Paperboats process input file                               #
+#                                                               ___/\___         #
+#  All process parameters that can be changed without           \______/         #
+#  recompiling paperboats are listed here.             ___/\___                  #
+#                                                      \______/   ___/\___       #
+#  author: Florian Kirchschlager                                  \______/       #
+#  email : kirchschlager.astro@gmail.com                                         #
+##################################################################################
+
+!=================================================================================
+n_cores          = 4    ! number of cores to use in parallel mode
+n_timepoints     = 30   ! number of considered timepoints, ignored when (n_timepoints <= 0), otherwise min(n_timepoints, number of chombo files) is the adopted number
+l_hydrocode      = 1   ! Which hydro-code? (1) Astrobear, (2) Pencil, (3) SWIFT, (4) Arepo, (5) Amun
+l_MHD            = 1    ! Magnetic fields included (1), otherwise (0)
+l_scenario       = 1    ! Scenario (1 = Dust only within a clump, 2 = Dust in the full domain, spherical explosion, 3 = Dust in the full domain
+l_boundary       = 0    ! Boundaries (0 = Outflow, 1 = Periodic)
+!=================================================================================
+n_plasma         = 2    ! Plasma drag (0 = off, 1 = on, grain in rest, 2 = comprehensive grain charge calculation)
+!=================================================================================
+n_gg             = 0    ! Grain-grain collisions (0 = off, 1 = on, 2 = vaporisation only, 3 = fragmentation only)
+n_gg_coulomb     = 1    ! Attraction or Repulsion of charged grains (0 = off, 1 = on)  
+!=================================================================================        
+n_sp             = 0    ! Sputtering (0 = off, 1 = on, 2 = only kinetic sputtering, 3 = only thermal sputtering)
+n_sp_coulomb     = 1    ! Attraction or Repulsion of charged grains in ionised gas (1 = on, 0 = off)         
+n_sput_size      = 1    ! Size correction for the sputtering-yield, (1 = on, 0 = off)
+n_gas_accretion  = 2    ! 0 = gas accretion off, 1 = gas accretion of the dusty gas, 2 = dusty gas is accreted and trapped (0, 1 or 2 are recommended as the total dust mass (incl. dusty gas) is conserved),
+                        ! 3 = regular gas is accreted,  4 = regular gas is accreted and trapped
+!=================================================================================                        
+n_ce             = 0    ! Coulomb explosion (0 = off, 1 = on), only on if n_plasma =/ 0                        
+!=================================================================================       
+theme_c1          = inferno ! Colourthemes: bwrcolo, cividis, inferno, magmaco, paperbo, plasmac, viridis 
+theme_c2          = bwrcolo ! Colourthemes: bwrcolo, cividis, inferno, magmaco, paperbo, plasmac, viridis 
+theme_c3          = viridis ! Colourthemes: bwrcolo, cividis, inferno, magmaco, paperbo, plasmac, viridis 

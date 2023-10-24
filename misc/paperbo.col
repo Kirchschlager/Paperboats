@@ -1,0 +1,8 @@
+# Colourtheme Paperboats (original; Kirchschlager et al. 2019) 
+#
+set palette defined (\
+0.0 'dark-red'      ,\
+0.1 'orange'        ,\
+0.2 'yellow'        ,\
+0.3 'dark-green'    ,\
+0.4 'dark-blue'     )

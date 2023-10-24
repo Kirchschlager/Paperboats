@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=00:05:00
+#PBS -l mem=16gb
+
+module swap cluster/doduo
+
+cd $PBS_O_WORKDIR
+
+#! Set email options
+#SBATCH --mail-type=ALL
+
+#! Set email address if email option turned on
+#SBATCH --mail-user=kirchschlager.astro@gmail.com
+
+module purge
+module load HDF5/1.12.2-iimpi-2022a
+module load gnuplot
+pwd
+chmod u+x Run.sh
+./Run.sh
+

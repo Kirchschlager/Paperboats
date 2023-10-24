@@ -1,0 +1,14 @@
+TIMESCALE    =  1.0                # in sec
+LSCALE       =  1.0                # in cm
+RSCALE       =  1.0                # in g*cm**(-3)
+TEMPSCALE    =  1.000000           # in K
+BSCALE       =  4.5861348e-12      # in G
+
+GmX               = 512,512,1                                   # Base grid resolution [x,y,z]
+GxBounds          = 0.0,0.0,0.0,7.899392e+20,7.899392e+20,0.0   # Problem boundaries in computational units,format: (xlower, ylower, zlower, xupper, yupper, zupper), for 2D problems, set zlower and zupper to 0.d0. 
+
+origin=256, 256, 1         ! : Origin, in pixel 
+radius_r=55.0                   ! : Radius of region of interest, in pc
+
+Xmu               = 1.0                             # Mean atomic mass 
+gamma             = 1.66666666667                   # Adiabatic index used for ideal gas and Van der Waals gas 
